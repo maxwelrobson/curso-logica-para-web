@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Programa Solidário")
+        var opcao = +prompt("Digite 1 para doar R$10\nDigite 2 para doar R$25\nDigite 3 para doar R$50\nDigite 4 para doar outros valores\nDigite 5 para cancelar")
+        var valor
+
+        switch (opcao) {
+            case 1:
+                valor = 10
+                break;
+
+            case 2:
+                valor = 25
+                break;    
+
+            case 3:
+                valor = 50
+                break;
+                
+            case 4:
+                valor = +prompt("Digite o valor: ")
+                break;
+                
+            case 5:
+                document.write("Doação cancelada.")
+                break;    
+        
+            default:
+                document.write("Opção inválida.")
+                break;
+        }
+
+        if (opcao == 1 || opcao == 2 || opcao == 3 || opcao == 4) {
+            document.write("Obrigado pela doação de "+valor+"!")
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Desafio: Faça um programa que leia quatro valores I, n1, n2 e n3. Sabe-se que
+I é um número inteiro e positivo e n1, n2, e n3 são quaisquer valores reais. O
+programa deve escrever os valores lidos e:
+
+se l = 1, escrever os três valores n1, n2 e n3 em ordem crescente;
+se I = 2, escrever os três valores n1, n2 e n3 em ordem decrescente;
+se I = 3, escrever os três valores n1, n2, e n3 de forma que o maior valor fique
+entre os outros dois;
+
+se I não for um dos três valores acima, imprima uma mensagem para indicar este
+comportamento.-->
+
+<body>
+    <script>
+        var i = +prompt("Escreva o valor de I: ")
+
+        if (i >= 1 && i <= 3) {
+            var n1 = +prompt("Escreva o valor de n1: ")
+            var n2 = +prompt("Escreva o valor de n2: ")
+            var n3 = +prompt("Escreva o valor de n3: ")
+
+            var valores = [n1, n2, n3]
+
+            switch (i) {
+                case 1:
+                    valores.sort(function(x, y) {
+                        return x - y;
+                    });
+                    document.write("Valores em ordem crescente: " + valores.join(", "));
+                    break;
+
+                case 2:
+                    valores.sort(function(x, y) {
+                        return y - x;
+                    });
+                    document.write("Valores em ordem decrescente: " + valores.join(", "));
+                    break;
+                    
+                case 3:
+                    valores.sort(function(x, y) {
+                        return x - y;
+                    });
+                    var valoresNum3 = [valores[0], valores[2], valores[1]]
+                    document.write("Maior valor entre os outros dois: " + valoresNum3.join(", "));
+                    break;    
+            
+                default:
+                    break;
+            }
+        } else {
+            document.write("O valor de I deve ser 1, 2 ou 3")
+        }
+    </script>
+</body>
+</html>

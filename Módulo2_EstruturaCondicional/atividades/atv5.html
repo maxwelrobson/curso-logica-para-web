@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var massa = +prompt("Digite a massa(kg): ")
+        var altura = +prompt("Digite a altura: ")
+
+        var imc = (massa / (altura ** 2))
+        var classificacao
+
+        if (imc < 16) {
+            classificacao = "Magreza grave"
+        } else if (imc >= 16 && imc < 17) {
+            classificacao = "Magreza moderada"
+        } else if (imc >= 17 && imc < 18.5) {
+            classificacao = "Magreza leve"
+        } else if (imc >= 18.5 && imc < 25) {
+            classificacao = "Saudável"
+        } else if (imc >= 25 && imc < 30) {
+            classificacao = "Sobrepeso"
+        } else if (imc >= 30 && imc < 35) {
+            classificacao = "Obesiadade Grau 1"
+        } else if (imc >= 35 && imc < 40) {
+            classificacao = "Obesidade Grau 2"
+        } else if ( imc >= 40) {
+            classificacao = "Obesidade Grau 3"
+        }
+
+        document.write("O IMC é :"+imc.toFixed(2)+"<br>")
+        document.write("Classificado como: "+classificacao)
+    </script>
+</body>
+</html>

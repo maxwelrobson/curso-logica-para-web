@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var av1 = +prompt("Nota da avaliação 1: ")
+        var av2 = +prompt("Nota da avaliação 2: ")
+        var av3 = +prompt("Nota da avaliação 3: ")
+
+        var media = (av1 + av2 + av3) / 3
+        var resultado
+
+        if (media >= 7) {
+            resultado = "Aprovado"
+        } else if (media < 7 && media >= 5) {
+            resultado = "Recuperação"
+        } else {
+            resultado = "Reprovado"
+        }
+
+        document.write("O aluno com a média "+media+" está com o resultado: "+resultado+".")
+    </script>
+</body>
+</html>
