@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+Você pode criar um algoritmo
+mais interativo. Portanto,
+escreva um algoritmo que o
+usuário digite a quantidade
+de números que ele deseja
+somar. Faça com que o
+programa leia esses números
+e no final apresente o
+resultado da soma.
+-->
+
+<body>
+    <script>
+        alert("Soma de números! ");
+        var numero;
+        var contador = 1;
+        var soma = 0;
+        var quantidade = +prompt("A quantidade de números você deseja contar? ");
+
+        while (contador <= quantidade) {
+            var numero = +prompt("Digite o " + contador + "o número: ");
+            soma = soma + numero;
+            contador = contador + 1;
+        }
+        document.write("A soma dos números é " + soma);
+    </script>
+</body>
+</html>
