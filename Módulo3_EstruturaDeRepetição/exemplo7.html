@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+Escreva um algoritmo que
+leia um dado número e
+imprima na tela a sua
+tabuada.
+-->
+
+<body>
+    <script>
+        var multiplicando = +prompt("Digite o número da tabuada: ");
+        var multiplicador = 1
+        
+        document.write("A tabuada de "+multiplicando+" é: <br>");
+        
+        do {
+            var produto = multiplicando * multiplicador
+            document.write(multiplicando+" x "+multiplicador+ " = " +produto+"<br>")
+            multiplicador++
+        } while (multiplicador <= 10);
+    </script>
+</body>
+</html>

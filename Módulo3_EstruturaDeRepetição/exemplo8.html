@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+Escreva um algoritmo que leia
+uma quantidade de números e
+imprima o resultado informando
+a quantidade de números
+digitados que são negativos.
+Imagine que o usuário escolhe
+quantos números ele deseja
+digitar.
+-->
+<body>
+    <script>
+        var contador = 1
+        var negativo = 0
+        var quantidade = +prompt("Quantos números deseja contar? ")
+
+        do {
+            var valor = +prompt("Digite o "+contador+" .º valor: <br>")
+            if (valor < 0) {
+                negativo++
+            }
+            contador++
+        } while (contador <= quantidade);
+
+        document.write("A quantidade de números negativos são: "+negativo)
+    </script>
+</body>
+</html>
