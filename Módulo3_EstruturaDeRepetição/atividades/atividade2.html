@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+Escreva um programa que repita a leitura
+de uma senha até que ela seja válida.
+Para cada leitura de senha incorreta
+informada, escrever a mensagem "Senha
+Invalida" e "Tente novamente". Quando a
+senha for informada corretamente deve
+ser impressa a mensagem "Acesso
+Permitido" e o algoritmo encerrado.
+Considere que a senha correta é o valor
+2023.
+-->
+
+<body>
+    <script>
+        
+        do {
+            var senha = +prompt("Digite a senha: ")
+            if (senha == 2023) {
+                document.write("Acesso permitido")
+            } else {
+                alert("Senha Inválida")
+                alert("Tente novamente")
+            }
+        } while (senha != 2023);
+    </script>
+</body>
+</html>
