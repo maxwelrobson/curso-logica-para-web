@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+Um grande empresa deseja determinar qual de seus
+produtos tem a preferência de seus clientes. Escreva um
+algoritmo para ler o tipo de produto comprado (codificado da
+seguinte forma:
+1.ProdutoA
+2.ProdutoB
+3.ProdutoC
+4.Fim.
+Caso o usuário informe um código inválido (fora da faixa de 1
+a 4) deve ser solicitado um novo código (até que seja válido).
+O programa será encerrado quando o código informado for o
+número 4. Deve ser escrito a mensagem: "MUITO
+OBRIGADO" e a quantidade de clientes que compraram cada
+tipo de produto.
+-->
+
+<body>
+    <script>
+
+        var quntProdutoA = 0
+        var quntProdutoB = 0
+        var quntProdutoC = 0
+        
+        do {
+            var tipoProduto = +prompt("Digite o código do produto que foi comprado: \n1 - Produto A, 2 - Produto B, 3 - Produto C ou 4 - Para finalizar")
+
+            if (tipoProduto > 4) {
+                alert("Use apenas os códigos de 1 a 4!")
+            } else {
+                switch (tipoProduto) {
+                case 1:
+                    quntProdutoA++
+                    break;
+            
+                case 2:
+                    quntProdutoB++
+                    break;
+
+                case 3:
+                    quntProdutoC++
+                    break;    
+                }
+            }
+
+    
+        } while (tipoProduto != 4);
+
+        document.write("MUITO OBRIGADO<br>")
+        document.write("Quantidade do Poduto A vendido: "+quntProdutoA+"<br>")
+        document.write("Quantidade do Poduto B vendido: "+quntProdutoB+"<br>")
+        document.write("Quantidade do Poduto C vendido: "+quntProdutoC+"<br>")
+
+    </script>
+</body>
+</html>
