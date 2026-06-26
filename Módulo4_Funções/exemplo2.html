@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--
+Faça um programa que leia dois
+números e faça as seguintes
+operações com esses números:
+a) Soma
+b) Subtração
+C) Multiplicação
+d) Divisão
+Imprima o resultado !!
+-->
+<body>
+    <script>
+        alert("Cálculo de dois números!")
+        let num1 = +prompt("Digite o primeiro número: ")
+        let num2 = +prompt("Digite o segundo número: ")
+
+        function saltoLinha() {
+            document.write("<br>")
+        }
+
+        function soma(num1, num2) {
+            return num1+num2
+        }
+
+        function subtracao(num1, num2) {
+            return num1-num2
+        }
+
+        function multiplicacao(num1, num2) {
+            return num1*num2
+        }
+
+        function divicao(num1, num2) {
+            return num1/num2
+        }
+
+        
+        document.write("A soma entre "+num1+" e "+num2+" é: "+soma(num1, num2))
+        saltoLinha()
+        document.write("A subtração entre "+num1+" e "+num2+" é: "+subtracao(num1, num2))
+        saltoLinha()
+        document.write("A multiplicação entre "+num1+" e "+num2+" é: "+multiplicacao(num1, num2))
+        saltoLinha()
+        document.write("A divisão entre "+num1+" e "+num2+" é: "+divicao(num1, num2))
+        saltoLinha()
+    </script>
+</body>
+</html>
