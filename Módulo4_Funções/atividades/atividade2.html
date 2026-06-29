@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = +prompt("Digite p número para calcular o fatorial: ");
+
+
+        function calcularFatorial(n) {
+            if (n < 0) return "Não existe fatorial de número negativo.";
+            if (n === 0 || n === 1) return 1;
+            
+            let resultado = 1;
+            for (let i = 2; i <= n; i++) {
+                resultado *= i;
+            }
+            return resultado;
+        }
+        
+        let fatorial = calcularFatorial(numero);
+
+        document.write("<h1>Resultado do Fatorial</h1>");
+        document.write("<p>O fatorial de " + numero + " é: <strong>" + fatorial + "</strong></p>");
+    </script>
+</body>
+</html>
