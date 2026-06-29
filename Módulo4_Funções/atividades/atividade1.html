@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!--
+Crie um algoritmo para
+verificar se um valor é par ou
+ímpar usando rotinas internas
+ou funções.
+-->
 <body>
-    
+    <script>
+        let num = +prompt("Digite o valor: ")
+        let resultado = ""
+
+        function verifica(num) {
+            if (num % 2 == 0) {
+                resultado = "par"
+            } else {
+                resultado = "ímpar"
+            }
+        }
+
+        verifica(num)
+        document.write("O número "+num+" é considerado: "+resultado)
+    </script>
 </body>
 </html>
