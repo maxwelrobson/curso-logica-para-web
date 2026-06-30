@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+        // 1. Função apenas captura e RETORNA o número digitado
+        function lerN() {
+            return +prompt("Digite o número: ");
+        }
+
+        // 2. Função apenas testa o número e RETORNA verdadeiro ou falso
+        function validaN(numero) {
+            if (numero >= 1 && numero <= 10) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        // 3. Função apenas gera a tabuada na tela
+        function tabuada(numero) {
+            document.write("A tabuada de " + numero + " é: <br>");
+            for (let contador = 1; contador <= 10; contador++) {
+                document.write(numero + " x " + contador + " = " + (numero * contador) + "<br>");
+            }
+        }
+
+        // --- FLUXO PRINCIPAL DO PROGRAMA ---
+        
+        // Declaramos a variável globalmente primeiro recebendo o primeiro input
+        let n = lerN(); 
+
+        // Se o número NÃO for válido, entra no loop até que o usuário digite um correto
+        while (validaN(n) === false) {
+            alert("O número tem que ser de 1 a 10");
+            n = lerN(); // Atualiza a variável global com a nova tentativa
+        }
+
+        // Assim que sair do loop (porque o número é válido), roda a tabuada
+        tabuada(n);
+        
+    </script>
+</body>
+</html>
