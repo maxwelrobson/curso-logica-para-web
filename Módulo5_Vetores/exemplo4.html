@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<!--
+Crie um programa que inicialize os dois
+primeiros elementos de um vetor, como 0 e
+1. Os demais elementos do vetor
+de comprimento 10, deve ser
+preenchido com a seguinte regra:
+
+vetor[i] = vetor[i - 1g + vetor[i - 2]
+
+Imprima cada elemento do vetor.
+-->
+<script>
+    alert("Criando Vetores! ");
+
+    var f = new Array(10);
+
+    f[0] = 0;
+    f[1] = 1;
+
+    for (var i = 2; i < 10; i++) {
+        f[i] = f[i - 1] + f[i - 2];
+        document.write("Na posicao " + i + ", temos o valor: " + f[i]);
+        document.write("<br>");
+    }
+</script>
+
