@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+Crie um programa que
+leia 4 números através
+de um vetor e logo em
+seguida imprima a
+soma desses
+números.
+-->
+<body>
+    <script>
+        function lerNumeros(quantidade) {
+            let lista = Array(quantidade)
+            for (let c = 0; c < lista.length; c++) {
+                lista[c] = +prompt("Escreva o " + (c + 1) + "º número: ")
+            }
+            return lista
+        }
+
+        function somarNumeros(lista) {
+            let total = 0
+            for (let c = 0; c < lista.length; c++) {
+                total += lista[c]
+            }
+            return total
+        }
+
+        function iniciarPrograma() {
+            let numeros = lerNumeros(4) // Executa a leitura de 4 números
+            let resultadoSoma = somarNumeros(numeros) // Passa os números para somar
+
+            document.write("A soma de " + numeros + " é: " + resultadoSoma)
+        }
+
+        iniciarPrograma()
+
+    </script>
+</body>
+</html>
