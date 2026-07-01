@@ -15,7 +15,14 @@ valor, ou seja, o seu valor atual mais o elemento digitado na posição anterior
 -->
 <body>
     <script>
-        
+        let vetor = Array(4)
+        let num = 10
+
+        for (let i = 0; i < vetor.length; i++) {
+            vetor[i] = +prompt("Digite o elemento "+ i +" :")
+            num = num +vetor[i]
+            alert("A soma com o elemento " + i + " é : "+ num)
+        }
     </script>
 </body>
 </html>
